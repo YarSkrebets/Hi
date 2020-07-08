@@ -1,4 +1,4 @@
-package ru.danbka.helloworld.controller;
+package ru.danbka.helloworld.controller.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +13,6 @@ import ru.danbka.helloworld.model.UserStatus;
 @Getter
 @Setter
 public class UpdateStatusResult {
-    private String error;
     private Long id;
     private UserStatus previousStatus;
     private UserStatus currentStatus;

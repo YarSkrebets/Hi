@@ -1,4 +1,4 @@
-package ru.danbka.helloworld.controller;
+package ru.danbka.helloworld.controller.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
