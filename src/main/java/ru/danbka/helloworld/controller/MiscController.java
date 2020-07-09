@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.danbka.helloworld.controller.pojo.StatsParams;
 import ru.danbka.helloworld.controller.pojo.StatsResult;
-import ru.danbka.helloworld.manager.MiscManager;
+import ru.danbka.helloworld.manager.MiscService;
 import ru.danbka.helloworld.model.User;
 
 import java.util.List;
@@ -21,11 +21,11 @@ import java.util.stream.Collectors;
 @RequestMapping("/misc")
 public class MiscController {
     @Autowired
-    private MiscManager miscManager;
+    private MiscService miscService;
 
     @PostMapping(value = "/stats")
     public StatsResult calculateStats(@RequestBody StatsParams params) {
-        List<User> users = miscManager.getStats(params.getStatus(), params.getTime());
+        List<User> users = miscService.getStats(params.getStatus(), params.getTime());
         return new StatsResult(System.currentTimeMillis(),
                 users.stream().map(User::getId).collect(Collectors.toList()));
     }

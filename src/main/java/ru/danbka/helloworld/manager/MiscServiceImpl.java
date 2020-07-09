@@ -14,7 +14,7 @@ import java.util.List;
  * Date: 7/8/2020: 5:44 PM
  */
 @Service
-public class MiscManagerImpl implements MiscManager {
+public class MiscServiceImpl implements MiscService {
     @Autowired
     UserRepository userRepository;
 

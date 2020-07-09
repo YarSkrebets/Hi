@@ -10,6 +10,6 @@ import java.util.List;
  * Created by: Yaroslav Skrebets <sonic@c7x.dev>
  * Date: 7/8/2020: 5:43 PM
  */
-public interface MiscManager {
+public interface MiscService {
     List<User> getStats(UserStatus status, Date startTime);
 }
